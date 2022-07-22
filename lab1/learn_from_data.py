@@ -1,5 +1,6 @@
 from enum import Enum
-from .statistics import Histogram, MIN_VAL, MAX_VAL
+# from .statistics import Histogram, MIN_VAL, MAX_VAL
+from lab1.statistics import Histogram, MIN_VAL, MAX_VAL
 import csv
 from sklearn.cluster import KMeans
 import numpy as np
@@ -303,7 +304,8 @@ class SPN:
 
 
 def get_selectivity_by_query(query):
-    csvfile = '/Users/zhangfei/Documents/projects/pycharm-projects/pytorch-projects/vldbss2022/lab1/data/title_sample_10000.csv'
+    # csvfile = '/Users/zhangfei/Documents/projects/pycharm-projects/pytorch-projects/vldbss2022/lab1/data/title_sample_10000.csv'
+    csvfile = '../lab1/data/title_sample_10000.csv'
     print("SPN estimation on %s" % csvfile)
     spn = SPN.construct_for_imdb_title(csvfile, 100)
     range_query = rq.ParsedRangeQuery.parse_range_query(query)
@@ -311,7 +313,8 @@ def get_selectivity_by_query(query):
     return sel
 
 def get_spn():
-    csvfile = '/Users/zhangfei/Documents/projects/pycharm-projects/pytorch-projects/vldbss2022/lab1/data/title_sample_10000.csv'
+    # csvfile = '/Users/zhangfei/Documents/projects/pycharm-projects/pytorch-projects/vldbss2022/lab1/data/title_sample_10000.csv'
+    csvfile = '../lab1/data/title_sample_10000.csv'
     spn = SPN.construct_for_imdb_title(csvfile, 100)
     return spn
 

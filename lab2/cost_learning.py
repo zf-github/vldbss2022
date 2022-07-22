@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from .plan import Operator, Plan
+# from plan import Operator, Plan
+from lab2.plan import Operator, Plan
 from sklearn import preprocessing
 import numpy as np
 import json
